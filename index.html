@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Layout</title>
+</head>
+<body>
+	<style>
+	.page-cover-image{
+		width: 100%;
+	}
+	body {
+		font-family: Arial, sans-serif;
+	}
+	
+	.profile-container {
+		display: flex;
+		align-items: center;
+		margin: 20px;
+	}
+	
+	.profile-photo {
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		margin-right: 20px;
+	}
+	
+	.profile-text {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.profile-text h2 { 
+		margin: 0;
+		font-size: 24px;
+	}
+	
+	.profile-text p {
+		margin: 5px 0;
+		font-size: 16px;
+	}
+
+	.navbar {
+    
+    text-align: center;
+    padding: 14px 16px;
+	}
+
+	.navbar a {
+    color: #c14c8a;
+    font-weight: 600;
+    padding: 0 16px;
+    display: inline-block;
+	}
+
+	.navbar a:hover {
+    background-color: #f8b8da;
+	transform: translateY(-1px);
+	}
+
+	.skill-container p {
+	background-color: #fff;
+    border: 1px solid #333;
+	text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.project-photo {
+		border-radius: 5px;
+		width: 90%;
+		position: relative;
+	}
+
+	footer {
+    background-color: #fff;
+    color: #111;
+    padding: 20px 0;
+    text-align: center;
+	}
+
+	.footer-container {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.footer-container h2 {
+    margin-bottom: 20px;
+	text-align: left;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-form label {
+		width: 100%;
+		text-align: left;
+		margin-bottom: 5px;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	.contact-form button {
+		padding: 15px;
+		text-align: center;
+		width: 100%;
+		border: none;
+		border-radius: 5px;
+		background-color: #c14c8a;
+		color: white;
+		cursor: pointer;
+	}
+
+	.contact-form button:hover {
+		background-color: #f8b8da;
+	}
+	</style>
+
+	<img class="page-cover-image" src="asset/LinkedIn_cover_-_2_(2).png" style="object-position:center 44.720000000000006%">
+    <nav class="navbar">
+		<a href="#home">Home</a></li>
+		<a href="#about">About</a></li>
+		<a href="#project">Project</a></li>
+		<a href="#contact">Contact</a></li>
+	</nav>
+
+	<div class="profile-container">
+        <img src="asset/foto_bebas.jpg.png" alt="Profile Photo" class="profile-photo">
+        <div class="profile-text">
+			<h1>Welcome to My Portofolio Site</h1>
+            <h2>Eka Bayu Perwita</h2>
+            <p>Software Engineer</p>
+            <p>Location: Bandung, Indonesia</p>
+        </div>
+	</div>
+	
+	<div class="myself-container">
+        <div class="Introduction">
+            <h2>Introduction</h2>
+            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+        </div>
+		<div class="about-me-container">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="skill-container">
+            <h2>Skill</h2>
+            <p>HTML & CSS</p>
+			<p>Javascript</p>
+			<p>React</p>
+			<p>Python</p>
+		</div>
+	</div>
+
+	<div class="project-container">
+        <div class="Project">
+            <h2>Project</h2>
+            <h3>Smartech</h3>
+			<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+			<img src="asset/smaertech.png" class="project-photo">
+            <h3>Easy Finance</h3>
+			<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+			<img src="asset/easy-finance.png" class="project-photo">
+			<h3>Fourniture</h3>
+			<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+			<img src="asset/fourniture.jpg" class="project-photo">
+			<h3>Kofieloka</h3>
+			<p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+			<img src="asset/kofieloka.png" class="project-photo">
+		</div>
+	</div>
+	<footer>
+        <div class="footer-container">
+            <div class="contact-box">
+                <h2>Let's Talk</h2>
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
