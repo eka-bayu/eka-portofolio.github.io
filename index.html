@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Layout</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 <body>
 	<style>
@@ -42,55 +43,84 @@
 		font-size: 16px;
 	}
 
-	.navbar {
-    
-    text-align: center;
-    padding: 14px 16px;
+	.navbar{
+		justify-content: space-around;
+		display: flex;
+		align-items: center;
+		z-index: 1000;
 	}
 
+	.navbar-container{
+		justify-content: none;
+		background-color: #DF9D9B;
+		position: fixed;
+		text-align: center;
+		text-decoration: none;
+		overflow: hidden;
+		list-style-type: none;
+		display: flex;
+		width: 100%;
+		top: 0;
+	}
+
+	.menu-navbar {
+		position: relative;
+		text-align: center;
+		padding: 8px 8px;
+		text-decoration: none;
+    	overflow: hidden;
+		list-style-type: none;
+		display: flex; 
+		justify-content: center;
+	}
+
+	.menu-navbar ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+    }	
+
+	.menu-navbar li {
+        margin: 0;
+        padding: 0;
+    }
+
 	.navbar a {
-    color: #c14c8a;
+	color: #fff;
     font-weight: 600;
-    padding: 0 16px;
-    display: inline-block;
+    padding: 0 14px;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
 	}
 
 	.navbar a:hover {
-    background-color: #f8b8da;
-	transform: translateY(-1px);
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.logo-navbar img{
+		position: relative;
+		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+		margin-right: 20px;
 	}
 
 	.skill-container p {
-	background-color: #fff;
-    border: 1px solid #333;
-	text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+		border: 1px solid #333;
+		text-align: center;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+		transition: ease;
 	}
 
 	.project-photo {
 		border-radius: 5px;
 		width: 90%;
-		position: relative;
-	}
-
-	footer {
-    background-color: #fff;
-    color: #111;
-    padding: 20px 0;
-    text-align: center;
-	}
-
-	.footer-container {
-		width: 100%;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	.footer-container h2 {
-    margin-bottom: 20px;
-	text-align: left;
+		position: static;
 	}
 
 	.contact-form {
@@ -120,7 +150,7 @@
 		width: 100%;
 		border: none;
 		border-radius: 5px;
-		background-color: #c14c8a;
+		background-color: #DF9D9B;
 		color: white;
 		cursor: pointer;
 	}
@@ -128,15 +158,113 @@
 	.contact-form button:hover {
 		background-color: #f8b8da;
 	}
-	</style>
+
+	.contact-container {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 20px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		background-color: #DF9D9B;
+	}
+
+	.card {
+		background-color: #fff;
+		border-radius: 8px;
+		padding: 20px;
+		width: 40%;
+		outline: 2px #DF9D9B;
+	}
+
+	.card-title {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		text-align: center;
+		flex-direction: column;
+	}
+
+	.card-content {
+		font-size: 16px;
+		line-height: 1.5;
+		text-align: center;
+	}
+
+	.form-group {
+		margin-bottom: 15px;
+	}
+
+	.form-label {
+		display: block;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+
+	.form-input {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+
+	.btn {
+		background-color: #DF9D9B;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	.btn:hover {
+		background-color: #fe7772;
+	}
+
+	.contact-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	.contact-icon img {
+		width:60px;
+		height: 60px;
+	}
+	
+	.card-content p {
+		text-align: center;
+	}
+
+	.social-media-icon{
+		text-align: left;
+    	align-items: center;
+		display: flex;
+		list-style-type: none; 
+        vertical-align: middle;
+	}
+
+	.social-media-icon img{
+		width:30px;
+		height: 30px;
+		margin-right: 8px;
+	}
+</style>
+	<div class="navbar-container">
+		<nav class="navbar">
+			<a href="#home" class="logo-navbar"><img src="asset/eka bayu perwita.png"></a>
+			<ul class="menu-navbar">	
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#project">Project</a></li>
+				<li><a href="#contact">Contact</a></li>
+		</ul>
+		</nav>
+	</div>
 
 	<img class="page-cover-image" src="asset/LinkedIn_cover_-_2_(2).png" style="object-position:center 44.720000000000006%">
-    <nav class="navbar">
-		<a href="#home">Home</a></li>
-		<a href="#about">About</a></li>
-		<a href="#project">Project</a></li>
-		<a href="#contact">Contact</a></li>
-	</nav>
+   
 
 	<div class="profile-container">
         <img src="asset/foto_bebas.jpg.png" alt="Profile Photo" class="profile-photo">
@@ -183,24 +311,46 @@
 			<img src="asset/kofieloka.png" class="project-photo">
 		</div>
 	</div>
-	<footer>
-        <div class="footer-container">
-            <div class="contact-box">
-                <h2>Let's Talk</h2>
-                <form class="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                    
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </div>
-    </footer>
+	
+	<div class="contact-container">
+		<div class="card">
+			<div class="contact-card">
+		  		<div class="contact-icon">
+					<img src="asset/phone-line.svg">
+		  		</div>
+			<h2 class="card-title">Contact</h2>
+			<p class="card-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, perspiciatis.</p>
+		</div>
+		<ul class="social-media-card">
+			<h2 class="card-title">My Social Media</h2>
+			<li class="social-media-icon"><img src="asset/instagram-line.svg">@ekabayu_p</li>
+			<li class="social-media-icon"><img src="asset/linkedin-fill.svg">eka-bayu-perwita</li>
+			<li class="social-media-icon"><img src="asset/mail_20dp_FILL0_wght400_GRAD0_opsz20.svg">ekabayuperwita13@gmail.com</li>
+		</ul>				
+	</div>
+	  	  
+		<div class="card">
+		  <h2 class="card-title">Please fill out this form</h2>
+		  <form>
+			<div class="form-group">
+			  <label class="form-label" for="name">Name:</label>
+			  <input class="form-input" type="text" id="name" name="name" placeholder="Your Name">
+			</div>
+			<div class="form-group">
+			  <label class="form-label" for="email">Email:</label>
+			  <input class="form-input" type="email" id="email" name="email" placeholder="Your Email">
+			</div>
+			<div class="form-group">
+			  <label class="form-label" for="phone">Phone Number:</label>
+			  <input class="form-input" type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+			</div>
+			<div class="form-group">
+			  <label class="form-label" for="message">Message:</label>
+			  <textarea class="form-input" id="message" name="message" placeholder="Your Message"></textarea>
+			</div>
+			<button class="btn" type="submit">SEND</button>
+		  </form>
+		</div>
+	  </div>
 </body>
 </html>
